@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "PUNK EC for Google Chrome",
+  "version": "1.0.3",
+  "description": "悪質なECサイトをブロックしよう！PUNK EC for Google Chromeは消費者庁「悪質な海外ウェブサイト一覧」より、模倣品販売あるいは詐欺の疑いがあると報告されているECサイトの利用を制限するGoogle Chromeの拡張機能です",
+  "icons": {
+	  "16": "images/icons/punkec-logo16.png",
+	  "48": "images/icons/punkec-logo48.png",
+	  "128": "images/icons/punkec-logo128.png"},
+  "author": "Aiba Akihito",
+  "browser_action": {
+  	"default_icon":{
+  		 "16": "images/icons/punkec-logo16.png"
+  	}
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["jquery-3.1.1.min.js", "popup.js"]
+      }
+  ],
+  "permissions": [
+
+  ],
+  "web_accessible_resources": [
+    "punk_ec_content.png"
+  ]
+}
